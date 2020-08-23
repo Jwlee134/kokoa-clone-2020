@@ -1,0 +1,41 @@
+.badge {
+  background-color: tomato;
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: 600;
+}
+.red-point {
+  background-color: tomato;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+}
+.find-screen .screen-header__icons,
+.more-screen .screen-header__icons,
+.icon-row__icon:nth-child(2),
+.nav__li:last-child {
+  position: relative;
+}
+.find-screen .screen-header__icons .red-point,
+.more-screen .screen-header__icons .red-point {
+  position: absolute;
+  right: -4px;
+  top: -9px;
+}
+.icon-row__icon:nth-child(2) .red-point {
+  position: absolute;
+  right: 9px;
+  top: -9px;
+  width: 6px;
+  height: 6px;
+}
+.nav__li:last-child .red-point {
+  position: absolute;
+  right: -5px;
+  top: -1px;
+}

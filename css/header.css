@@ -1,0 +1,42 @@
+@keyframes searchicon {
+  0% {
+    transform: none;
+  }
+  50% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: none;
+  }
+}
+header i {
+  cursor: pointer;
+}
+header .fa-search:hover {
+  animation: searchicon 0.5s linear infinite;
+}
+.screen-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 0px;
+  margin-bottom: 15px;
+}
+.screen-header__title {
+  font-size: 32px;
+  font-weight: 600;
+}
+.screen-header__icons span {
+  margin-left: 25px;
+}
+@keyframes rotatecog {
+  from {
+    transform: none;
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+.screen-header__icons .fa-cog:hover {
+  animation: rotatecog 2s linear infinite;
+}

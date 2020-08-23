@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chats</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="status-bar">
+      <div class="status-bar__column">
+        <span>No Service</span>
+        <i class="fas fa-wifi"></i>
+      </div>
+      <div class="status-bar__column">
+        <span>18:43</span>
+      </div>
+      <div class="status-bar__column">
+        <span>100%</span>
+        <i class="fas fa-battery-full fa-lg"></i>
+        <i class="fas fa-bolt"></i>
+      </div>
+    </div>
+    <main class="main-screen">
+      <header class="screen-header">
+        <h1 class="screen-header__title">Chats</h1>
+        <div class="screen-header__icons">
+          <span><i class="fas fa-search fa-lg"></i></span>
+          <span><i class="far fa-comment-dots fa-lg"></i></span>
+          <span><i class="fas fa-music fa-lg"></i></span>
+          <span><i class="fas fa-cog fa-lg"></i></span>
+        </div>
+      </header>
+      <a href="chat.html">
+        <div class="user-component">
+          <div class="user-component__column">
+            <img
+              class="user-component__avatar user-component__avatar"
+              src="https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-19/s320x320/88458001_516994418961477_73676556190351360_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_ohc=r3K_fRW82JsAX-RdmmT&oh=db480dbdb7d09036c458790176f10eb0&oe=5F6451F3"
+            />
+            <div class="user-component__text">
+              <h4 class="user-component__title">Jaewon</h4>
+              <h6 class="user-component__subtitle">
+                Hey dude what's up?
+              </h6>
+            </div>
+          </div>
+          <div class="user-component__column">
+            <span class="user-component__time">21:22</span>
+            <div class="badge">1</div>
+          </div>
+        </div>
+      </a>
+    </main>
+    <nav class="nav">
+      <ul class="nav__ul">
+        <li class="nav__li">
+          <a class="nav__link" href="friends.html"
+            ><i class="far fa-user fa-2x"></i
+          ></a>
+        </li>
+        <li class="nav__li">
+          <a class="nav__link" href="chats.html">
+            <span class="nav__notification">1</span>
+            <i class="fas fa-comment fa-2x"></i
+          ></a>
+        </li>
+        <li class="nav__li">
+          <a class="nav__link" href="find.html"
+            ><i class="fas fa-search fa-2x"></i
+          ></a>
+        </li>
+        <li class="nav__li">
+          <a class="nav__link" href="more.html"
+            ><i class="fas fa-ellipsis-h fa-2x"></i
+          ></a>
+          <div class="red-point"></div>
+        </li>
+      </ul>
+    </nav>
+
+    <div id="no-mobile">
+      <span>Make your screen size smaller :p</span>
+    </div>
+    <script
+      src="https://kit.fontawesome.com/6acf5761ca.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
