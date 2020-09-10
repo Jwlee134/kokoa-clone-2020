@@ -1,6 +1,6 @@
 #chat-screen {
   background-color: #abc1d1;
-  height: 200vh;
+  height: 100vh;
 }
 #chat-screen .alt-header,
 #chat-screen .status-bar {
@@ -37,6 +37,7 @@
   flex-direction: column;
   align-items: center;
   animation: fadein 0.8s linear;
+  margin-bottom: 25px;
 }
 .chat__timestamp {
   color: white;
@@ -156,7 +157,7 @@
 }
 .reply:focus-within input {
   width: 90vw;
-  transform: translateX(-13%) translateY(-80px);
+  transform: translateX(-14%) translateY(-80px);
 }
 .reply:focus-within {
   transform: translateY(80px);
