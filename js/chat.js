@@ -6,7 +6,7 @@ const form = document.querySelector(`.reply`),
 
 const CHAT_LS = `chat`;
 
-const chats = [];
+let chats = [];
 
 const time = nowTime();
 
@@ -14,13 +14,25 @@ function nowTime() {
   const date = new Date();
   const hours = date.getHours();
   const minutes = date.getMinutes();
-  const seconds = date.getSeconds();
 
   return `${hours}:${minutes < 10 ? `0${minutes}` : minutes}`;
 }
 
 function saveChats(chats) {
   localStorage.setItem(CHAT_LS, JSON.stringify(chats));
+}
+
+function removeBubble() {
+  const btn = event.target;
+  const li = btn.parentNode.parentNode.parentNode;
+  const main = li.parentNode;
+  main.removeChild(li);
+  const cleanBubble = chats.filter(function (bubble) {
+    return bubble.id !== parseInt(li.id);
+  });
+  chats = cleanBubble;
+  saveChats(chats);
+  console.log(chats);
 }
 
 function createChat(text) {
@@ -41,9 +53,12 @@ function createChat(text) {
   span1.classList.add(`message__bubble`);
   span2.classList.add(`message__time`);
   span1.innerText = text;
+  span1.addEventListener(`click`, removeBubble);
   span2.innerText = time;
+  li.id = chats.length + 1;
   const chatObj = {
     text: text,
+    id: chats.length + 1,
   };
   chats.push(chatObj);
   saveChats(chats);
