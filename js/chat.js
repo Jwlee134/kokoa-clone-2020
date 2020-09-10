@@ -1,18 +1,20 @@
 const form = document.querySelector(`.reply`),
   input = form.querySelector(`input`),
   list = document.querySelector(`.message-row--own`),
-  main = document.querySelector(`main`);
+  main = document.querySelector(`main`),
+  btn = document.querySelector(`button`);
 
 const CHAT_LS = `chat`;
 
 const chats = [];
 
-const date = new Date();
 const time = nowTime();
 
 function nowTime() {
-  const hours = date.getHours(),
-    minutes = date.getMinutes();
+  const date = new Date();
+  const hours = date.getHours();
+  const minutes = date.getMinutes();
+  const seconds = date.getSeconds();
 
   return `${hours}:${minutes < 10 ? `0${minutes}` : minutes}`;
 }
@@ -39,13 +41,13 @@ function createChat(text) {
   span1.classList.add(`message__bubble`);
   span2.classList.add(`message__time`);
   span1.innerText = text;
-  span2.innerText = `${time}`;
+  span2.innerText = time;
   const chatObj = {
     text: text,
-    time: time,
   };
   chats.push(chatObj);
   saveChats(chats);
+  window.scroll({ top: 10000, left: 0, behavior: "smooth" });
 }
 
 function submitChat() {
